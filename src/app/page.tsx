@@ -5,18 +5,22 @@ import TimeLine from "@/components/gsapTimeLine/TimeLine";
 import ButtonTrigger from "@/components/gsapTimeLine/ButtonTrigger";
 import CheckboxTrigger from "@/components/useGsap/CheckboxTrigger";
 import ExitAnimation from "@/components/useGsap/ExitAnimation";
+import GsapContext from "@/components/useContext/GsapContext";
+import Nav from "@/components/navbar/Nav";
 
 export default function Home() {
 
   return (
-    <main className="flex flex-col gap-5 items-center py-10 bg-[#1a1a1a] text-white">
-      {/* <AnimationStart />
-      <AnimationEnding />
-      <AnimationFromTo /> */}
-      {/* <TimeLine /> */}
-      {/* <ButtonTrigger /> */}
-      {/* <CheckboxTrigger /> */}
-      <ExitAnimation />
-    </main>
+    <Nav />
+    // <main className="flex flex-col gap-5 items-center py-10 bg-[#1a1a1a] text-white">
+      // {/* <AnimationStart />
+      // <AnimationEnding />
+      // <AnimationFromTo /> */}
+      // {/* <TimeLine /> */}
+      // {/* <ButtonTrigger /> */}
+      // {/* <CheckboxTrigger /> */}
+      // {/* <ExitAnimation /> */}
+      // {/* <GsapContext /> */}
+    // </main>
   );
 }
