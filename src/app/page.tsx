@@ -11,13 +11,15 @@ import Nav from "@/components/navbar/Nav";
 export default function Home() {
 
   return (
-    <Nav />
+    <>
+      <Nav />
+      <ButtonTrigger />
+    </>
     // <main className="flex flex-col gap-5 items-center py-10 bg-[#1a1a1a] text-white">
       // {/* <AnimationStart />
       // <AnimationEnding />
       // <AnimationFromTo /> */}
       // {/* <TimeLine /> */}
-      // {/* <ButtonTrigger /> */}
       // {/* <CheckboxTrigger /> */}
       // {/* <ExitAnimation /> */}
       // {/* <GsapContext /> */}
