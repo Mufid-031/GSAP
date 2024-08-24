@@ -7,7 +7,7 @@ export default function BasicScrollTrigger() {
   const boxOne = useRef<HTMLDivElement>(null);
   const boxTwo = useRef<HTMLDivElement>(null);
 
-  const animationScroll = (el: HTMLDivElement | null, start: number | string) => {
+  const animationScroll = (el: HTMLDivElement | null, start: number | string, end: number | string | (() => number) | undefined) => {
     return gsap.to(el, {
       borderRadius: "50%",
       rotate: 180,
@@ -15,15 +15,17 @@ export default function BasicScrollTrigger() {
       scrollTrigger: {
         trigger: el, // the element that will trigger the animation
         start: start, // the start of the animation when the element is in view
+        end: end, // the end of the animation when the element is in view
         markers: true, // marke your animation in web
+        toggleClass: "bg-red-400", // the class that will be added to the element when the animation is triggered
       },
     });
   };
 
   useGSAP(
     () => {
-      animationScroll(boxOne.current, 500);
-      animationScroll(boxTwo.current, "top center"); // if element top is in center of the screen, it will trigger the animation
+      animationScroll(boxOne.current, 500, "top center");
+      animationScroll(boxTwo.current, "top 30%", "center 20%"); // if element top is in center of the screen, it will trigger the animation
     },
     // [boxOne, boxTwo] // if inView is true, it will trigger the animation, but animation will run again if isInView is true
     {
