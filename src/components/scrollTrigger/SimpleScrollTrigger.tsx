@@ -9,11 +9,10 @@ import Scrub from "./Scrub";
 import Pin from "./Pin";
 import TimeLine from "./TimeLine";
 import CreateTrigger from "./CreateTrigger";
+import Labels from "./Labels";
 gsap.registerPlugin(ScrollTrigger);
 
-
 export default function SimpleScrollTrigger() {
-
   return (
     <main className="flex flex-col">
       <div className="w-full h-screen bg-orange-400 flex justify-center items-center">
@@ -25,7 +24,11 @@ export default function SimpleScrollTrigger() {
       {/* <Scrub /> */}
       {/* <Pin /> */}
       {/* <TimeLine /> */}
-      <CreateTrigger />
+      {/* <CreateTrigger /> */}
+      <Labels />
+      <div className="w-full h-screen bg-orange-400 flex justify-center items-center">
+        <h3 className="text-3xl font-bold">Simple Scroll Trigger</h3>
+      </div>
     </main>
   );
 }
