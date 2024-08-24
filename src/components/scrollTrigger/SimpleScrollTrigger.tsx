@@ -7,6 +7,7 @@ import UsingTimeLine from "./UsingTimeLine";
 import ToggleActions from "./ToggleActions";
 import Scrub from "./Scrub";
 import Pin from "./Pin";
+import TimeLine from "./TimeLine";
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -21,7 +22,8 @@ export default function SimpleScrollTrigger() {
       {/* <UsingTimeLine /> */}
       {/* <ToggleActions /> */}
       {/* <Scrub /> */}
-      <Pin />
+      {/* <Pin /> */}
+      <TimeLine />
     </main>
   );
 }
